@@ -146,40 +146,6 @@ echo "Configuring i3 to start Polybar..."
 mkdir -p ~/.config/i3
 echo 'exec_always --no-startup-id polybar mybar &' >> ~/.config/i3/config
 
-
-# Configure Conky for i3 keybindings
-echo "Configuring Conky for i3 keybindings..."
-mkdir -p ~/.config/conky
-cat <<EOL > ~/.config/conky/i3_keybindings.conf
-conky.config = {
-    background = true,
-    update_interval = 1,
-    double_buffer = true,
-    no_buffers = true,
-    text_buffer_size = 2048,
-    imlib_cache_size = 0,
-    own_window = true,
-    own_window_type = 'dock',
-    own_window_transparent = true,
-    alignment = 'top_right',
-    gap_x = 10,
-    gap_y = 50,
-    minimum_width = 200,
-    minimum_height = 200,
-    font = 'monospace 10',
-    default_color = 'white',
-};
-
-conky.text = [[
-${color grey}i3 Keybindings:
-${color white}Mod + Enter${color grey} - Open terminal
-${color white}Mod + D${color grey} - Open dmenu
-${color white}Mod + Shift + Q${color grey} - Close window
-${color white}Mod + Arrow keys${color grey} - Move focus
-${color white}Mod + Shift + Arrow keys${color grey} - Move window
-]];
-EOL
-
 # Launch Conky on i3 startup
 echo "Adding Conky to i3 startup..."
 echo 'exec --no-startup-id conky -c ~/.config/conky/i3_keybindings.conf &' >> ~/.config/i3/config
