@@ -136,7 +136,6 @@ format-muted = "Muted"
 
 [module/date]
 type = internal/date
-interval = 1
 date = "%Y-%m-%d %H:%M:%S"
 format = "{date}"
 EOL
