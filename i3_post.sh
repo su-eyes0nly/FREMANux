@@ -59,7 +59,7 @@ fi
 
 # Install required tooling
 echo "Installing tools..."
-sudo pacman -Sy --noconfirm fish vim python rustc 
+sudo pacman -Sy --noconfirm fish vim python rust 
 
 # Installing i3 window manager and necessary tools
 echo "Installing i3 Window Manager and dependencies..."
