@@ -103,8 +103,7 @@ height = 30
 background = #282C34
 foreground = #ABB2BF
 modules-left = workspaces
-modules-center = cpu ram gpu
-modules-right = network volume date
+modules-right = cpu ram network volume date
 
 [module/workspaces]
 type = internal/i3
@@ -117,11 +116,6 @@ format = CPU: <percentage>%
 [module/ram]
 type = internal/memory
 format = RAM: <used> / <total> MB
-
-[module/gpu]
-type = custom/script
-exec = glxinfo | grep "OpenGL renderer string" | awk -F': ' '{print "GPU: " \$2}'
-interval = 10
 
 [module/network]
 type = internal/network
