@@ -7,8 +7,11 @@ echo "Updating system..."
 sudo pacman -Syu --noconfirm
 
 # Installing forensic tools
-echo "Installing forensic tools..."
-sudo pacman -Sy --noconfirm ghidra volatility binwalk guymager wireshark-qt fish
+echo "Installing general tools..."
+sudo pacman -Sy --noconfirm fish vim htop 
+
+# Create default folders
+mkdir Documents Downloads Pictures
 
 # Installing i3 window manager and necessary tools
 echo "Installing i3 Window Manager and dependencies..."
