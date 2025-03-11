@@ -38,10 +38,6 @@ sudo systemctl enable NetworkManager.service
 echo "Setting Fish as the default shell..."
 chsh -s /usr/bin/fish $(whoami)
 
-# Add user to Wireshark group for packet capturing
-echo "Adding $(whoami) to Wireshark group..."
-sudo usermod -aG wireshark $(whoami)
-
 # Setting up Polybar for i3
 echo "Configuring Polybar..."
 mkdir -p ~/.config/polybar
