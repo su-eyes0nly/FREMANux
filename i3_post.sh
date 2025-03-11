@@ -146,9 +146,5 @@ echo "Configuring i3 to start Polybar..."
 mkdir -p ~/.config/i3
 echo 'exec_always --no-startup-id polybar mybar &' >> ~/.config/i3/config
 
-# Launch Conky on i3 startup
-echo "Adding Conky to i3 startup..."
-echo 'exec --no-startup-id conky -c ~/.config/conky/i3_keybindings.conf &' >> ~/.config/i3/config
-
 
 echo "Post-install setup complete! Please reboot the system."
