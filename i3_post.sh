@@ -8,7 +8,7 @@ sudo pacman -Syu --noconfirm
 
 # Installing forensic tools
 echo "Installing forensic tools..."
-sudo pacman -Sy --noconfirm autopsy ghidra detect-it-easy volatility binwalk guymager wireshark-qt fish
+sudo pacman -Sy --noconfirm ghidra volatility binwalk guymager wireshark-qt fish
 
 # Installing i3 window manager and necessary tools
 echo "Installing i3 Window Manager and dependencies..."
